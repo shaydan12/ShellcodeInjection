@@ -2,7 +2,7 @@ Project: Demonstrate the technique of shellcode injection into a running Windows
 
 &nbsp;
 
-#  Code
+# Code
 
 ```C++
 #include <iostream>
@@ -48,7 +48,7 @@ DWORD GetProcessID(const std::wstring& processName) {
 }
 
 int main() {
-    std::wstring processName = L"explorer.exe";
+    std::wstring processName = L"CalculatorApp.exe";
     DWORD procID = GetProcessID(processName);
 
     if (procID == 0) {
@@ -186,7 +186,7 @@ Calls the GetProcessID() function mentioned earlier. After getting the process I
 
 ```C++
 int main() {
-    std::wstring processName = L"explorer.exe";
+    std::wstring processName = L"CalculatorApp.exe";
     DWORD procID = GetProcessID(processName);
 
     if (procID == 0) {
@@ -242,3 +242,29 @@ int main() {
 - **WaitForSingleObject** - Wait for the remote thread to finish executing
 - **CloseHandle** - Closes handles to the remote thread and the process
 - **VirtualFreeEx** - Frees the allocated Memory
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+# Generating and Using Shellcode with msfvenom
+
+&nbsp;
+
+Generating meterpreter shellcode using **msfvenom** to paste into the 'payload' variable:![image](https://github.com/user-attachments/assets/bb3fd137-6034-4bc7-befa-74caf2706a98)
+
+
+&nbsp;
+
+&nbsp;
+
+Setting up the listener on Metasploit:
+
+![image](https://github.com/user-attachments/assets/53d2ac8e-033b-4474-a9cf-5011395d501d)
+
+
+&nbsp;
+
+&nbsp;
