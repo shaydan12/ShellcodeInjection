@@ -264,6 +264,10 @@ Setting up the listener on Metasploit:
 
 ![image](https://github.com/user-attachments/assets/53d2ac8e-033b-4474-a9cf-5011395d501d)
 
+I gained access to the remote machine and then added a new value to the Run key in the registry for persistence:
+![image](https://github.com/user-attachments/assets/a443fe0b-66c8-49bc-a246-79580b03f168)
+
+
 
 &nbsp;
 
