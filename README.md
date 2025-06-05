@@ -125,8 +125,10 @@ Including headers:
 This is where the payload that will be injected into the specified process will be defined
 
 ```C++
-unsigned char payload[] = " <The shellcode goes here> ";
-
+unsigned char payload[] = {
+    // Example: msfvenom -p windows/x64/messagebox TEXT="Injected" TITLE="Hello" -f c
+    0xfc, 0x48, 0x83, 0xe4, 0xf0, /* ...etc... */
+};
 ```
 
 &nbsp;
