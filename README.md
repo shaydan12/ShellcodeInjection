@@ -9,7 +9,10 @@ Project: Demonstrate the technique of shellcode injection into a running Windows
 #include <windows.h>
 #include <tlhelp32.h>
 
-unsigned char payload[] = " <The shellcode goes here> ";
+unsigned char payload[] = {
+    // Example: msfvenom -p windows/x64/messagebox TEXT="Injected" TITLE="Hello" -f c
+    0xfc, 0x48, 0x83, 0xe4, 0xf0, /* ...etc... */
+};
 
 DWORD GetProcessID(const std::wstring& processName) {
     HANDLE hSnapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
